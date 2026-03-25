@@ -3,8 +3,8 @@ import os
 
 batch_size=20
 
-os.environ["HTTP_PROXY"] = "http://154.0.14.116:3128"
-os.environ["HTTPS_PROXY"] = "http://157.66.138.79:1080"
+# os.environ["HTTP_PROXY"] = "http://154.0.14.116:3128"
+# os.environ["HTTPS_PROXY"] = "http://157.66.138.79:1080"
 
 
 def transcribe_video(video_id):
@@ -22,6 +22,9 @@ def transcribe_video(video_id):
 
     print(data)
     print("snippet count", len(fetched_transcript))
+    print("total data length", len(data))
+
+    return data
 
     # this is for translating hindi transcripts
     

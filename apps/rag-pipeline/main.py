@@ -1,7 +1,8 @@
 from utils.transcript import transcribe_video
-
+from utils.chunk import chunk_transcript
 def main():
-    transcribe_video("aircAruvnKk")
+    transcript_data = transcribe_video("aircAruvnKk")
+    chunk_transcript(transcript_data, 200, 0.2)
 
 if __name__ == "__main__":
     main()
