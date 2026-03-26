@@ -35,5 +35,13 @@ def embed_chunks(chunks, video_id, original_lang, is_translated, source):
 
     logger.info("All chunks embedded and stored successfully")
 
+def user_query_embed(user_query):
+    embedded_user_query = model.encode(user_query).tolist()
 
+    results = client.query_points(
+        collection_name="yt-transcripts",
+        query=embedded_user_query,
+        limit=5
+    )
 
+    return results;
