@@ -7,7 +7,7 @@ batch = []
 
 def main():
 
-    video_id = "aircAruvnKk"
+    video_id = "C6YtPJxNULA"
 
     transcript_data, language = transcribe_video(video_id)
 
